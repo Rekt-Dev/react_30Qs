@@ -14,6 +14,7 @@ export default function App() {
     </h1>
     <div className="card">
       <div className="card-inner">
-        
+        <p>Ofear</p>
+        <p>Ofear888</p>
   </div>;
 }
