@@ -4,7 +4,7 @@ import {useEffect, useState} from "react"
 export default function App() {
   const[users, setUsers] =  useState<any[]>([])
   useEffect(()=> {
-    fetch("https://jsonplaceholdere.typicode.com/users")
+    fetch("https://jsonplaceholder.typicode.com/users")
     .then ((response) => response.json())
     .then((json) => setUsers(json))
   },[])
