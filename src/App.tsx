@@ -2,26 +2,30 @@ import "./styles.css";
 import {useEffect, useState} from "react"
 
 export default function App() {
-  const[users, setUsers] = useState([])
+  const[users, setUsers] =  useState<any[]>([])
   useEffect(()=> {
     fetch("https://jsonplaceholdere.typicode.com/users")
-    .then ((response)=> response.json())
-    .then((json)=> setUsers(json))
+    .then ((response) => response.json())
+    .then((json) => setUsers(json))
   },[])
   
+  const mapData=() => {
+    let mappedArray=users.map((user)=>user.id*2)
+    console.log(mappedArray)
+  }
   return <div className="App">
     <h1>
       Users
     </h1>
     <div className="card">
-      {users.map((user)=>(
+      {users.map((users)=>(
        <div>
-         {user.name}
+         {users.name}
        </div> 
       ))}
       <div className="card-inner">
-        <p>{user.name</p>
-        <p>{user.username}</p>
+        <p>{users.name}</p>
+        <p>{users.username}</p>
   </div>
   </div>
   </div>
