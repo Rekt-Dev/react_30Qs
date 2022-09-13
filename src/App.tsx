@@ -18,15 +18,19 @@ export default function App() {
       Users
     </h1>
     <div className="card">
-      {users.map((users)=>(
-       <div>
-         {users.name}
+      {users.map((user)=>(
+       <div className="card-inner">
+         {user.name}
        </div> 
+  
       ))}
       <div className="card-inner">
-        <p>{users.name}</p>
-        <p>{users.username}</p>
+        <p>{user.name}</p>
+        <p>{user.username}</p>
   </div>
+       <button onClick ={mapData}> 
+         check manipulated array
+       </button>
   </div>
   </div>
 }
