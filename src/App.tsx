@@ -14,14 +14,14 @@ export default function App() {
       Users
     </h1>
     <div className="card">
-      {users.map((user)=>(
+      {users.map((users)=>(
        <div>
-         {user.name}
+         {users.name}
        </div> 
       ))}
       <div className="card-inner">
-        <p>{user.name}</p>
-        <p>{user.username}</p>
+        <p>{users.name}</p>
+        <p>{users.username}</p>
   </div>
   </div>
   </div>
