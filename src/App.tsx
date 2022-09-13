@@ -12,6 +12,8 @@ export default function App() {
     <h1>
       Users
     </h1>
-    
+    <div className="card">
+      <div className="card-inner">
+        
   </div>;
 }
