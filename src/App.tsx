@@ -2,7 +2,7 @@ import "./styles.css";
 import {useEffect, useState} from "react"
 
 export default function App() {
-  const[users, setUsers] = useState([])
+  const[users, setUsers] =  useState<any[]>([])
   useEffect(()=> {
     fetch("https://jsonplaceholdere.typicode.com/users")
     .then ((response)=> response.json())
@@ -20,7 +20,7 @@ export default function App() {
        </div> 
       ))}
       <div className="card-inner">
-        <p>{user.name</p>
+        <p>{user.name}</p>
         <p>{user.username}</p>
   </div>
   </div>
