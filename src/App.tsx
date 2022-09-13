@@ -5,10 +5,14 @@ export default function App() {
   const[users, setUsers] =  useState<any[]>([])
   useEffect(()=> {
     fetch("https://jsonplaceholdere.typicode.com/users")
-    .then ((response)=> response.json())
-    .then((json)=> setUsers(json))
+    .then ((response) => response.json())
+    .then((json) => setUsers(json))
   },[])
   
+  const mapData=() => {
+    let mappedArray=users.map((user)=>user.id*2)
+    console.log(mappedArray)
+  }
   return <div className="App">
     <h1>
       Users
