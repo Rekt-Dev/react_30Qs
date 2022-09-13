@@ -2,11 +2,11 @@ import "./styles.css";
 import {useEffect, useState} from "react"
 
 export default function App() {
-  const[users, sertUsers] = useState([])
+  const[users, setUsers] = useState([])
   useEffect(()=> {
     fetch("https://jsonplaceholdere.typicode.com/users")
     .then ((response)=> response.json())
-    .then((json)=> console.log(json))
+    .then((json)=> setUsers(json))
   },[])
   
   return <div className="App">
@@ -16,12 +16,12 @@ export default function App() {
     <div className="card">
       {users.map((user)=>(
        <div>
-         
+         {user.name}
        </div> 
       ))}
       <div className="card-inner">
-        <p>Ofear</p>
-        <p>Ofear888</p>
+        <p>{user.name</p>
+        <p>{user.username}</p>
   </div>
   </div>
   </div>
