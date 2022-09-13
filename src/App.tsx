@@ -19,7 +19,7 @@ export default function App() {
     </h1>
     <div className="card">
       {users.map((user)=>(
-       <div>
+       <div className="card-inner">
          {user.name}
        </div> 
   
